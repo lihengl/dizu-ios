@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B00ED5C31B0659E1001FDC00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ED5C21B0659E1001FDC00 /* AppDelegate.swift */; };
-		B00ED5C51B0659E1001FDC00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ED5C41B0659E1001FDC00 /* ViewController.swift */; };
 		B00ED5C81B0659E1001FDC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00ED5C61B0659E1001FDC00 /* Main.storyboard */; };
 		B00ED5CA1B0659E1001FDC00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00ED5C91B0659E1001FDC00 /* Images.xcassets */; };
 		B00ED5D91B0659E1001FDC00 /* DizuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ED5D81B0659E1001FDC00 /* DizuTests.swift */; };
-		B02AA9281B0787CE006BCCD2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02AA9271B0787CE006BCCD2 /* AboutViewController.swift */; };
-		B02AA92A1B0845D9006BCCD2 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = B02AA9291B0845D9006BCCD2 /* BullsEye.html */; };
-		B02AA92D1B085364006BCCD2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02AA92B1B085364006BCCD2 /* Default-568h@2x.png */; };
-		B02AA92E1B085364006BCCD2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B02AA92C1B085364006BCCD2 /* Default@2x.png */; };
+		B04D0A061B08709800A33FA6 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D0A051B08709800A33FA6 /* ChecklistViewController.swift */; };
+		B04D0A091B08720600A33FA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B04D0A071B08720600A33FA6 /* LaunchScreen.xib */; };
+		B04D0A0B1B08FA6C00A33FA6 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D0A0A1B08FA6C00A33FA6 /* ChecklistItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,16 +30,14 @@
 		B00ED5BD1B0659E1001FDC00 /* Dizu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dizu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00ED5C11B0659E1001FDC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00ED5C21B0659E1001FDC00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B00ED5C41B0659E1001FDC00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B00ED5C71B0659E1001FDC00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B00ED5C91B0659E1001FDC00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B00ED5D21B0659E1001FDC00 /* DizuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DizuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00ED5D71B0659E1001FDC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00ED5D81B0659E1001FDC00 /* DizuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizuTests.swift; sourceTree = "<group>"; };
-		B02AA9271B0787CE006BCCD2 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		B02AA9291B0845D9006BCCD2 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
-		B02AA92B1B085364006BCCD2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B02AA92C1B085364006BCCD2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B04D0A051B08709800A33FA6 /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
+		B04D0A081B08720600A33FA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B04D0A0A1B08FA6C00A33FA6 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,13 +79,11 @@
 		B00ED5BF1B0659E1001FDC00 /* Dizu */ = {
 			isa = PBXGroup;
 			children = (
-				B02AA92B1B085364006BCCD2 /* Default-568h@2x.png */,
-				B02AA92C1B085364006BCCD2 /* Default@2x.png */,
-				B02AA9291B0845D9006BCCD2 /* BullsEye.html */,
-				B00ED5C21B0659E1001FDC00 /* AppDelegate.swift */,
-				B00ED5C41B0659E1001FDC00 /* ViewController.swift */,
+				B04D0A071B08720600A33FA6 /* LaunchScreen.xib */,
 				B00ED5C61B0659E1001FDC00 /* Main.storyboard */,
-				B02AA9271B0787CE006BCCD2 /* AboutViewController.swift */,
+				B00ED5C21B0659E1001FDC00 /* AppDelegate.swift */,
+				B04D0A051B08709800A33FA6 /* ChecklistViewController.swift */,
+				B04D0A0A1B08FA6C00A33FA6 /* ChecklistItem.swift */,
 				B00ED5C91B0659E1001FDC00 /* Images.xcassets */,
 				B00ED5C01B0659E1001FDC00 /* Supporting Files */,
 			);
@@ -202,9 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00ED5C81B0659E1001FDC00 /* Main.storyboard in Resources */,
-				B02AA92D1B085364006BCCD2 /* Default-568h@2x.png in Resources */,
-				B02AA92E1B085364006BCCD2 /* Default@2x.png in Resources */,
-				B02AA92A1B0845D9006BCCD2 /* BullsEye.html in Resources */,
+				B04D0A091B08720600A33FA6 /* LaunchScreen.xib in Resources */,
 				B00ED5CA1B0659E1001FDC00 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,9 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B02AA9281B0787CE006BCCD2 /* AboutViewController.swift in Sources */,
-				B00ED5C51B0659E1001FDC00 /* ViewController.swift in Sources */,
 				B00ED5C31B0659E1001FDC00 /* AppDelegate.swift in Sources */,
+				B04D0A0B1B08FA6C00A33FA6 /* ChecklistItem.swift in Sources */,
+				B04D0A061B08709800A33FA6 /* ChecklistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +246,14 @@
 				B00ED5C71B0659E1001FDC00 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B04D0A071B08720600A33FA6 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B04D0A081B08720600A33FA6 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
