@@ -1,6 +1,7 @@
 import UIKit
 
-class ChecklistViewController: UITableViewController {
+class ChecklistViewController: UITableViewController,
+    AddItemViewControllerDelegate {
     var errorMessage = "UNEXPECTED ROW"
     var items: [ChecklistItem]
 
@@ -13,12 +14,12 @@ class ChecklistViewController: UITableViewController {
         items.append(row0item)
 
         let row1item = ChecklistItem()
-        row1item.checked = false
+        row1item.checked = true
         row1item.text = "Bite the Bullet"
         items.append(row1item)
 
         let row2item = ChecklistItem()
-        row2item.checked = false
+        row2item.checked = true
         row2item.text = "Hit the Sack"
         items.append(row2item)
 
@@ -28,7 +29,7 @@ class ChecklistViewController: UITableViewController {
         items.append(row3item)
 
         let row4item = ChecklistItem()
-        row4item.checked = false
+        row4item.checked = true
         row4item.text = "Right the Hell Now"
         items.append(row4item)
 
@@ -40,24 +41,44 @@ class ChecklistViewController: UITableViewController {
         super.init(coder: aDecoder)
     }
 
-    override func tableView(tableView: UITableView,
-        numberOfRowsInSection section: Int) -> Int {
-        return items.count
-    }
-
     func configureCheckmarkForCell(cell: UITableViewCell,
         withChecklistItem item: ChecklistItem) {
-        if item.checked {
-            cell.accessoryType = .Checkmark
-        } else {
-            cell.accessoryType = .None
-        }
+        cell.accessoryType = item.checked ? .Checkmark : .None
     }
 
     func configureTextForCell(cell: UITableViewCell,
         withChecklistItem item: ChecklistItem) {
         let label = cell.viewWithTag(1000) as! UILabel
         label.text = item.text
+    }
+
+    func addItemViewControllerDidCancel(controller: AddItemViewController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func addItemViewController(controller: AddItemViewController,
+        didFinishAddingItem item: ChecklistItem) {
+        items.append(item)
+        let indexPath = NSIndexPath(forRow: (items.count - 1), inSection: 0)
+        tableView.insertRowsAtIndexPaths([indexPath],
+            withRowAnimation: .Automatic
+        )
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddItem" {
+            let navigationController = segue.destinationViewController
+                as! UINavigationController
+            let controller = navigationController.topViewController
+                as! AddItemViewController
+            controller.delegate = self
+        }
+    }
+
+    override func tableView(tableView: UITableView,
+        numberOfRowsInSection section: Int) -> Int {
+        return items.count
     }
 
     override func tableView(tableView: UITableView,
@@ -83,5 +104,15 @@ class ChecklistViewController: UITableViewController {
 
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
+
+    override func tableView(tableView: UITableView,
+        commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath) {
+        items.removeAtIndex(indexPath.row)
+        tableView.deleteRowsAtIndexPaths([indexPath],
+            withRowAnimation: .Automatic
+        )
+    }
+
 }
 
