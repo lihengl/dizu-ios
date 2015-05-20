@@ -1,49 +1,47 @@
 import UIKit
 
 class ChecklistViewController: UITableViewController,
-    AddItemViewControllerDelegate {
+    ItemDetailViewControllerDelegate {
     var errorMessage = "UNEXPECTED ROW"
     var items: [ChecklistItem]
 
     required init(coder aDecoder: NSCoder) {
         items = [ChecklistItem]()
-
-        let row0item = ChecklistItem()
-        row0item.checked = false
-        row0item.text = "Walk the Dog"
-        items.append(row0item)
-
-        let row1item = ChecklistItem()
-        row1item.checked = true
-        row1item.text = "Bite the Bullet"
-        items.append(row1item)
-
-        let row2item = ChecklistItem()
-        row2item.checked = true
-        row2item.text = "Hit the Sack"
-        items.append(row2item)
-
-        let row3item = ChecklistItem()
-        row3item.checked = false
-        row3item.text = "Read the Manual"
-        items.append(row3item)
-
-        let row4item = ChecklistItem()
-        row4item.checked = true
-        row4item.text = "Right the Hell Now"
-        items.append(row4item)
-
-        let row5item = ChecklistItem()
-        row5item.checked = false
-        row5item.text = "Rock and Roll"
-        items.append(row5item)
-
         super.init(coder: aDecoder)
+        loadChecklistItems()
+    }
+
+    func loadChecklistItems() {
+        let path = dataFilePath()
+        if NSFileManager.defaultManager().fileExistsAtPath(path) {
+            if let data = NSData(contentsOfFile: path) {
+                let unarchiver = NSKeyedUnarchiver(forReadingWithData: data)
+                items = unarchiver.decodeObjectForKey("ChecklistItems")
+                    as! [ChecklistItem]
+                unarchiver.finishDecoding()
+            }
+        }
+    }
+
+    func dataFilePath() -> String {
+        let directories = NSSearchPathForDirectoriesInDomains(
+            .DocumentDirectory, .UserDomainMask, true
+        ) as! [String]
+        return directories[0].stringByAppendingPathComponent("Checklist.plist")
+    }
+
+    func saveChecklistItems() {
+        let data = NSMutableData()
+        let archiver = NSKeyedArchiver(forWritingWithMutableData: data)
+        archiver.encodeObject(items, forKey: "ChecklistItems")
+        archiver.finishEncoding()
+        data.writeToFile(dataFilePath(), atomically: true)
     }
 
     func configureCheckmarkForCell(cell: UITableViewCell,
         withChecklistItem item: ChecklistItem) {
-        cell.accessoryType = item.checked ? .Checkmark : .None
+        let label = cell.viewWithTag(1001) as! UILabel
+        label.text = item.checked ? "√" : ""
     }
 
     func configureTextForCell(cell: UITableViewCell,
@@ -52,11 +50,11 @@ class ChecklistViewController: UITableViewController,
         label.text = item.text
     }
 
-    func addItemViewControllerDidCancel(controller: AddItemViewController) {
+    func itemDetailViewControllerDidCancel(controller: ItemDetailViewController) {
         dismissViewControllerAnimated(true, completion: nil)
     }
 
-    func addItemViewController(controller: AddItemViewController,
+    func itemDetailViewController(controller: ItemDetailViewController,
         didFinishAddingItem item: ChecklistItem) {
         items.append(item)
         let indexPath = NSIndexPath(forRow: (items.count - 1), inSection: 0)
@@ -64,6 +62,19 @@ class ChecklistViewController: UITableViewController,
             withRowAnimation: .Automatic
         )
         dismissViewControllerAnimated(true, completion: nil)
+        saveChecklistItems()
+    }
+
+    func itemDetailViewController(controller: ItemDetailViewController,
+        didFinishEditingItem item: ChecklistItem) {
+        if let index = find(items, item) {
+            let indexPath = NSIndexPath(forRow: index, inSection: 0)
+            if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+                configureTextForCell(cell, withChecklistItem: item)
+            }
+        }
+        dismissViewControllerAnimated(true, completion: nil)
+        saveChecklistItems()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -71,8 +82,18 @@ class ChecklistViewController: UITableViewController,
             let navigationController = segue.destinationViewController
                 as! UINavigationController
             let controller = navigationController.topViewController
-                as! AddItemViewController
+                as! ItemDetailViewController
             controller.delegate = self
+        } else if segue.identifier == "EditItem" {
+            let navigationController = segue.destinationViewController
+                as! UINavigationController
+            let controller = navigationController.topViewController
+                as! ItemDetailViewController
+            controller.delegate = self
+            if let indexPath = tableView.indexPathForCell(
+                sender as! UITableViewCell) {
+                controller.itemToEdit = items[indexPath.row]
+            }
         }
     }
 
@@ -103,6 +124,7 @@ class ChecklistViewController: UITableViewController,
         }
 
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        saveChecklistItems()
     }
 
     override func tableView(tableView: UITableView,
@@ -112,6 +134,7 @@ class ChecklistViewController: UITableViewController,
         tableView.deleteRowsAtIndexPaths([indexPath],
             withRowAnimation: .Automatic
         )
+        saveChecklistItems()
     }
 
 }
