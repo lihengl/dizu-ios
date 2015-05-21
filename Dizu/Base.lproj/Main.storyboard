@@ -1,235 +1,154 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9n6-4i-RjT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Checklists-->
+        <scene sceneID="9de-gr-dCG">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Dizu" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="nkV-Jo-z0T">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uds-5n-Qwm">
-                                <rect key="frame" x="52" y="25" width="464" height="271"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qII-c0-xex">
-                                        <rect key="frame" x="180" y="141" width="100" height="37"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                        <size key="titleShadowOffset" width="0.0" height="1"/>
-                                        <state key="normal" title="Hit Me!" backgroundImage="Button-Normal">
-                                            <color key="titleColor" red="0.3529411764705882" green="0.11764705882352941" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <state key="highlighted" backgroundImage="Button-Highlighted"/>
-                                        <connections>
-                                            <action selector="showAlert" destination="vXZ-lx-hvc" eventType="touchUpInside" id="qsD-4W-1Wh"/>
-                                        </connections>
-                                    </button>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Xnq-ID-9ST">
-                                        <rect key="frame" x="70" y="93" width="320" height="31"/>
-                                        <connections>
-                                            <action selector="sliderMoved:" destination="vXZ-lx-hvc" eventType="valueChanged" id="I8m-SX-OUQ"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3o0-mK-Y40">
-                                        <rect key="frame" x="20" y="100" width="9" height="17"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPv-jr-fxt">
-                                        <rect key="frame" x="412" y="99" width="25" height="17"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZq-5F-zcd">
-                                        <rect key="frame" x="105" y="225" width="51" height="20"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqc-Mf-4Gd">
-                                        <rect key="frame" x="164" y="222" width="72" height="25"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Round:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYk-XS-u4L">
-                                        <rect key="frame" x="254" y="225" width="56" height="20"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnO-hw-suO">
-                                        <rect key="frame" x="319" y="222" width="36" height="25"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JVq-EZ-KiM">
-                                        <rect key="frame" x="412" y="219" width="32" height="32"/>
-                                        <state key="normal" image="InfoButton" backgroundImage="SmallButton">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="dji-v9-dll" kind="modal" modalTransitionStyle="flipHorizontal" id="WHr-8C-ML7"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Put the Bull's Eye as close as you can do:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7M-yO-JyN">
-                                        <rect key="frame" x="54" y="20" width="317" height="20"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFm-EG-k7y">
-                                        <rect key="frame" x="379" y="21" width="29" height="19"/>
-                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                        <size key="shadowOffset" width="0.0" height="1"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjX-wn-sQd">
-                                        <rect key="frame" x="23" y="219" width="32" height="32"/>
-                                        <state key="normal" image="StartOverIcon" backgroundImage="SmallButton">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="startOver" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bl0-x3-Adi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="464" id="Gyl-nq-1eP"/>
-                                    <constraint firstAttribute="height" constant="271" id="ccV-eQ-zU7"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="nkV-Jo-z0T" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0y7-we-A4v"/>
-                            <constraint firstAttribute="trailing" secondItem="nkV-Jo-z0T" secondAttribute="trailing" id="Vxb-Rb-Mum"/>
-                            <constraint firstAttribute="centerY" secondItem="uds-5n-Qwm" secondAttribute="centerY" id="bcG-c5-Wzr"/>
-                            <constraint firstAttribute="centerX" secondItem="uds-5n-Qwm" secondAttribute="centerX" id="eSU-Wu-vTb"/>
-                            <constraint firstItem="nkV-Jo-z0T" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="lQr-V4-vFs"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nkV-Jo-z0T" secondAttribute="bottom" id="vjj-0W-FZf"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="roundLabel" destination="KnO-hw-suO" id="gMs-nY-g3N"/>
-                        <outlet property="scoreLabel" destination="Mqc-Mf-4Gd" id="XfF-ce-pk2"/>
-                        <outlet property="slider" destination="Xnq-ID-9ST" id="1qA-Ql-B3u"/>
-                        <outlet property="targetLabel" destination="ZFm-EG-k7y" id="3pI-Ca-qvo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="245" y="366"/>
-        </scene>
-        <!--About View Controller-->
-        <scene sceneID="ZKp-m6-0xk">
-            <objects>
-                <viewController id="dji-v9-dll" customClass="AboutViewController" customModule="Dizu" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Isy-Hq-APQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xsc-8P-rxK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NQT-Mu-lJo">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                <tableViewController id="1ie-PB-96z" customClass="ChecklistViewController" customModule="Dizu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sjk-LG-NpP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="RbO-Ic-mUy">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                            </imageView>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TDX-qU-JEQ">
-                                <rect key="frame" x="20" y="20" width="528" height="235"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDZ-Gu-aDJ">
-                                <rect key="frame" x="234" y="263" width="100" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="EFd-QF-XSd"/>
-                                    <constraint firstAttribute="width" constant="100" id="V3U-tf-z6l"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
-                                <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="Close" backgroundImage="Button-Normal">
-                                    <color key="titleColor" red="0.35294117650000001" green="0.1176470588" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="Button-Highlighted">
-                                    <color key="titleColor" red="0.35294117650000001" green="0.1176470588" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="close" destination="dji-v9-dll" eventType="touchUpInside" id="iv1-DN-tnf"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="mDZ-Gu-aDJ" firstAttribute="top" secondItem="TDX-qU-JEQ" secondAttribute="bottom" constant="8" id="1v7-Wg-fF5"/>
-                            <constraint firstItem="RbO-Ic-mUy" firstAttribute="top" secondItem="Isy-Hq-APQ" secondAttribute="bottom" id="BWj-FP-zIP"/>
-                            <constraint firstItem="RbO-Ic-mUy" firstAttribute="leading" secondItem="NQT-Mu-lJo" secondAttribute="leading" id="Ecy-ct-Vgy"/>
-                            <constraint firstAttribute="trailing" secondItem="TDX-qU-JEQ" secondAttribute="trailing" constant="20" id="Frz-tF-YuK"/>
-                            <constraint firstAttribute="trailing" secondItem="RbO-Ic-mUy" secondAttribute="trailing" id="b7F-Vg-lyc"/>
-                            <constraint firstItem="Xsc-8P-rxK" firstAttribute="top" secondItem="mDZ-Gu-aDJ" secondAttribute="bottom" constant="20" id="gDs-h4-pHl"/>
-                            <constraint firstAttribute="centerX" secondItem="mDZ-Gu-aDJ" secondAttribute="centerX" id="kvW-eO-Jao"/>
-                            <constraint firstItem="Xsc-8P-rxK" firstAttribute="top" secondItem="RbO-Ic-mUy" secondAttribute="bottom" id="lRH-XE-2Te"/>
-                            <constraint firstItem="TDX-qU-JEQ" firstAttribute="top" secondItem="Isy-Hq-APQ" secondAttribute="bottom" constant="20" id="v9u-bi-Jdo"/>
-                            <constraint firstItem="TDX-qU-JEQ" firstAttribute="leading" secondItem="NQT-Mu-lJo" secondAttribute="leading" constant="20" id="wa1-4u-EXd"/>
-                        </constraints>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <connections>
-                        <outlet property="webView" destination="TDX-qU-JEQ" id="Eho-iE-qeN"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hk7-OA-dPz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="10" reuseIdentifier="ChecklistItem" id="uKg-W3-lXE">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uKg-W3-lXE" id="5Yn-51-gJw">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qah-Ud-j37">
+                                            <rect key="frame" x="37" y="8" width="524" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWu-3y-PiA">
+                                            <rect key="frame" x="8" y="11" width="21" height="21"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="gqC-jS-Gx0" kind="presentation" identifier="EditItem" trigger="accessoryAction" id="x1U-JG-dqm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="1ie-PB-96z" id="Wja-Ft-SYb"/>
+                            <outlet property="delegate" destination="1ie-PB-96z" id="xCV-Pn-gky"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Checklists" id="iCi-vK-oWm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HV2-LT-jrL">
+                            <connections>
+                                <segue destination="gqC-jS-Gx0" kind="presentation" identifier="AddItem" id="Rz2-A3-J9D"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CHa-t4-1Ip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245" y="825"/>
+            <point key="canvasLocation" x="1307" y="449"/>
+        </scene>
+        <!--Add Item-->
+        <scene sceneID="dbg-4x-gKq">
+            <objects>
+                <tableViewController id="DWH-4L-O6P" customClass="ItemDetailViewController" customModule="Dizu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="gIM-Ix-jsX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
+                        <sections>
+                            <tableViewSection id="0dc-0s-a1R">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="oLe-nx-IgU">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLe-nx-IgU" id="s5I-Yj-aDX">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name of the Item" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iGE-tQ-CD3">
+                                                    <rect key="frame" x="8" y="7" width="584" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <action selector="done" destination="DWH-4L-O6P" eventType="editingDidEndOnExit" id="OLH-D9-hLu"/>
+                                                        <outlet property="delegate" destination="DWH-4L-O6P" id="rWw-dB-kGM"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="DWH-4L-O6P" id="Sa2-3H-g2S"/>
+                            <outlet property="delegate" destination="DWH-4L-O6P" id="QG8-Eb-hco"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Item" id="CqW-X6-Xfb">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="uLP-Nw-hZn">
+                            <connections>
+                                <action selector="cancel" destination="DWH-4L-O6P" id="lMq-c6-Caa"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" style="done" systemItem="done" id="ShL-52-efX">
+                            <connections>
+                                <action selector="done" destination="DWH-4L-O6P" id="6DD-7U-PQ8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButton" destination="ShL-52-efX" id="hFZ-bS-G4f"/>
+                        <outlet property="textField" destination="iGE-tQ-CD3" id="dHb-5G-jfg"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CT6-Wg-TL6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2949" y="449"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Tt8-wj-DrU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9n6-4i-RjT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Btm-EF-oCj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1ie-PB-96z" kind="relationship" relationship="rootViewController" id="48s-bj-VbX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PDk-CX-AfF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="495" y="449"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="elq-FV-Kpp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqC-jS-Gx0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wan-mD-xCr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DWH-4L-O6P" kind="relationship" relationship="rootViewController" id="7gU-3p-yya"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwd-ko-bMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2137" y="449"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Background" width="480" height="320"/>
-        <image name="Button-Highlighted" width="100" height="37"/>
-        <image name="Button-Normal" width="100" height="37"/>
-        <image name="InfoButton" width="10" height="22"/>
-        <image name="SmallButton" width="32" height="32"/>
-        <image name="StartOverIcon" width="20" height="20"/>
-    </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
-    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Rz2-A3-J9D"/>
+    </inferredMetricsTieBreakers>
 </document>
