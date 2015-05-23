@@ -2,11 +2,16 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
+    let dataModel = DataModel()
 
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        let navigationController = window!.rootViewController
+            as! UINavigationController
+        let controller = navigationController.viewControllers[0]
+            as! AllListsViewController
+        controller.dataModel = dataModel
         return true
     }
 
@@ -14,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
+        dataModel.saveChecklists()
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -23,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        dataModel.saveChecklists()
     }
 
 }
