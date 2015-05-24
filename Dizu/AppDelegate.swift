@@ -6,13 +6,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let dataModel = DataModel()
 
     func application(application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?
+    ) -> Bool {
         let navigationController = window!.rootViewController
-            as! UINavigationController
-        let controller = navigationController.viewControllers[0]
-            as! AllListsViewController
-        controller.dataModel = dataModel
+        as! UINavigationController
+
+        let mainController = navigationController.viewControllers[0]
+        as! AllListsViewController
+
+        mainController.dataModel = dataModel
+
         return true
+    }
+
+    func application(application: UIApplication,
+        didReceiveLocalNotification notification: UILocalNotification) {
+        println("Did received: \(notification)")
     }
 
     func applicationWillResignActive(application: UIApplication) {
