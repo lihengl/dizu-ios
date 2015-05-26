@@ -15,7 +15,7 @@ class ChecklistItem: NSObject, NSCoding {
     func notificationForThisItem() -> UILocalNotification? {
         let sharedApplication = UIApplication.sharedApplication()
         let allNotifications = sharedApplication.scheduledLocalNotifications
-        as! [UILocalNotification]
+            as! [UILocalNotification]
 
         for notification in allNotifications {
             if let number = notification.userInfo?["ItemID"] as? NSNumber {
@@ -39,10 +39,10 @@ class ChecklistItem: NSObject, NSCoding {
         if shouldRemind && (dueDate.compare(NSDate()) !=
             NSComparisonResult.OrderedAscending) {
             let localNotification = UILocalNotification()
-            localNotification.fireDate = dueDate
-            localNotification.timeZone = NSTimeZone.defaultTimeZone()
-            localNotification.alertBody = text
             localNotification.soundName = UILocalNotificationDefaultSoundName
+            localNotification.alertBody = text
+            localNotification.timeZone = NSTimeZone.defaultTimeZone()
+            localNotification.fireDate = dueDate
             localNotification.userInfo = ["ItemID": itemID]
 
             sharedApplication.scheduleLocalNotification(localNotification)
@@ -50,11 +50,11 @@ class ChecklistItem: NSObject, NSCoding {
     }
 
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeBool(shouldRemind, forKey: "ShouldRemind")
         aCoder.encodeInteger(itemID, forKey: "ItemID")
         aCoder.encodeObject(dueDate, forKey: "DueDate")
-        aCoder.encodeBool(checked, forKey: "Checked")
         aCoder.encodeObject(text, forKey: "Text")
+        aCoder.encodeBool(shouldRemind, forKey: "ShouldRemind")
+        aCoder.encodeBool(checked, forKey: "Checked")
     }
 
     required init(coder aDecoder: NSCoder) {

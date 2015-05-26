@@ -127,7 +127,7 @@ class ItemDetailViewController: UITableViewController,
         if indexPath.section == 1 && indexPath.row == 2 {
             var cell: UITableViewCell! = tableView
             .dequeueReusableCellWithIdentifier("DatePickerCell")
-            as? UITableViewCell
+                as? UITableViewCell
             if cell == nil {
                 cell = UITableViewCell(style: .Default,
                     reuseIdentifier: "DatePickerCell"
