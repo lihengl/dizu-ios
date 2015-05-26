@@ -2,27 +2,28 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let dataModel = DataModel()
     var window: UIWindow?
 
+    func application(application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?
+    ) -> Bool {
+        let navigationController = window!.rootViewController
+        as! UINavigationController
+        let mainController = navigationController.viewControllers[0]
+        as! AllListsViewController
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        mainController.dataModel = dataModel
+
         return true
     }
 
-    func applicationWillResignActive(application: UIApplication) {
-    }
-
     func applicationDidEnterBackground(application: UIApplication) {
-    }
-
-    func applicationWillEnterForeground(application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(application: UIApplication) {
+        dataModel.saveChecklists()
     }
 
     func applicationWillTerminate(application: UIApplication) {
+        dataModel.saveChecklists()
     }
 
 }
