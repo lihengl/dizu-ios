@@ -11,14 +11,7 @@
 		B00ED5C81B0659E1001FDC00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00ED5C61B0659E1001FDC00 /* Main.storyboard */; };
 		B00ED5CA1B0659E1001FDC00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00ED5C91B0659E1001FDC00 /* Images.xcassets */; };
 		B00ED5D91B0659E1001FDC00 /* DizuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ED5D81B0659E1001FDC00 /* DizuTests.swift */; };
-		B04D0A061B08709800A33FA6 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D0A051B08709800A33FA6 /* ChecklistViewController.swift */; };
-		B04D0A0B1B08FA6C00A33FA6 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D0A0A1B08FA6C00A33FA6 /* ChecklistItem.swift */; };
-		B04D0A0F1B0A504B00A33FA6 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04D0A0E1B0A504B00A33FA6 /* ItemDetailViewController.swift */; };
-		B0CDD3791B0FF62400919F02 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CDD3781B0FF62400919F02 /* AllListsViewController.swift */; };
-		B0CDD37B1B0FFD9E00919F02 /* Checklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CDD37A1B0FFD9E00919F02 /* Checklist.swift */; };
-		B0CDD37D1B10295600919F02 /* ListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CDD37C1B10295600919F02 /* ListDetailViewController.swift */; };
-		B0D158811B10D27600A8167F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D158801B10D27600A8167F /* DataModel.swift */; };
-		B0D158831B122DF800A8167F /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D158821B122DF800A8167F /* IconPickerViewController.swift */; };
+		B0DDB9FE1B1A124D005B22D5 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDB9FD1B1A124D005B22D5 /* CurrentLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,14 +33,7 @@
 		B00ED5D21B0659E1001FDC00 /* DizuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DizuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00ED5D71B0659E1001FDC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00ED5D81B0659E1001FDC00 /* DizuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizuTests.swift; sourceTree = "<group>"; };
-		B04D0A051B08709800A33FA6 /* ChecklistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
-		B04D0A0A1B08FA6C00A33FA6 /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
-		B04D0A0E1B0A504B00A33FA6 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
-		B0CDD3781B0FF62400919F02 /* AllListsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
-		B0CDD37A1B0FFD9E00919F02 /* Checklist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checklist.swift; sourceTree = "<group>"; };
-		B0CDD37C1B10295600919F02 /* ListDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailViewController.swift; sourceTree = "<group>"; };
-		B0D158801B10D27600A8167F /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		B0D158821B122DF800A8167F /* IconPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
+		B0DDB9FD1B1A124D005B22D5 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,14 +75,7 @@
 		B00ED5BF1B0659E1001FDC00 /* Dizu */ = {
 			isa = PBXGroup;
 			children = (
-				B04D0A0E1B0A504B00A33FA6 /* ItemDetailViewController.swift */,
-				B04D0A051B08709800A33FA6 /* ChecklistViewController.swift */,
-				B0D158821B122DF800A8167F /* IconPickerViewController.swift */,
-				B0CDD37C1B10295600919F02 /* ListDetailViewController.swift */,
-				B0CDD3781B0FF62400919F02 /* AllListsViewController.swift */,
-				B04D0A0A1B08FA6C00A33FA6 /* ChecklistItem.swift */,
-				B0CDD37A1B0FFD9E00919F02 /* Checklist.swift */,
-				B0D158801B10D27600A8167F /* DataModel.swift */,
+				B0DDB9FD1B1A124D005B22D5 /* CurrentLocationViewController.swift */,
 				B00ED5C21B0659E1001FDC00 /* AppDelegate.swift */,
 				B00ED5C61B0659E1001FDC00 /* Main.storyboard */,
 				B00ED5C91B0659E1001FDC00 /* Images.xcassets */,
@@ -231,14 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00ED5C31B0659E1001FDC00 /* AppDelegate.swift in Sources */,
-				B0CDD37D1B10295600919F02 /* ListDetailViewController.swift in Sources */,
-				B04D0A0F1B0A504B00A33FA6 /* ItemDetailViewController.swift in Sources */,
-				B0D158831B122DF800A8167F /* IconPickerViewController.swift in Sources */,
-				B0CDD37B1B0FFD9E00919F02 /* Checklist.swift in Sources */,
-				B04D0A0B1B08FA6C00A33FA6 /* ChecklistItem.swift in Sources */,
-				B0D158811B10D27600A8167F /* DataModel.swift in Sources */,
-				B0CDD3791B0FF62400919F02 /* AllListsViewController.swift in Sources */,
-				B04D0A061B08709800A33FA6 /* ChecklistViewController.swift in Sources */,
+				B0DDB9FE1B1A124D005B22D5 /* CurrentLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
