@@ -12,6 +12,7 @@
 		B00ED5CA1B0659E1001FDC00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00ED5C91B0659E1001FDC00 /* Images.xcassets */; };
 		B00ED5D91B0659E1001FDC00 /* DizuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00ED5D81B0659E1001FDC00 /* DizuTests.swift */; };
 		B0DDB9FE1B1A124D005B22D5 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DDB9FD1B1A124D005B22D5 /* CurrentLocationViewController.swift */; };
+		B0E84B3A1B1E0AD500849B91 /* LocationDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E84B391B1E0AD500849B91 /* LocationDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		B00ED5D71B0659E1001FDC00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B00ED5D81B0659E1001FDC00 /* DizuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DizuTests.swift; sourceTree = "<group>"; };
 		B0DDB9FD1B1A124D005B22D5 /* CurrentLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentLocationViewController.swift; sourceTree = "<group>"; };
+		B0E84B391B1E0AD500849B91 /* LocationDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		B00ED5BF1B0659E1001FDC00 /* Dizu */ = {
 			isa = PBXGroup;
 			children = (
+				B0E84B391B1E0AD500849B91 /* LocationDetailsViewController.swift */,
 				B0DDB9FD1B1A124D005B22D5 /* CurrentLocationViewController.swift */,
 				B00ED5C21B0659E1001FDC00 /* AppDelegate.swift */,
 				B00ED5C61B0659E1001FDC00 /* Main.storyboard */,
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0E84B3A1B1E0AD500849B91 /* LocationDetailsViewController.swift in Sources */,
 				B00ED5C31B0659E1001FDC00 /* AppDelegate.swift in Sources */,
 				B0DDB9FE1B1A124D005B22D5 /* CurrentLocationViewController.swift in Sources */,
 			);

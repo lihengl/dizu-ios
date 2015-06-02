@@ -198,8 +198,12 @@ class CurrentLocationViewController: UIViewController, CLLocationManagerDelegate
         configureGetButton()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier != "TagLocation" { return }
+        let navigation = segue.destinationViewController as! UINavigationController
+        let controller = navigation.topViewController as! LocationDetailsViewController
+        controller.coordinate = location!.coordinate
+        controller.placemark = placemark
     }
 
     @IBAction func getLocation() {
